@@ -1,18 +1,14 @@
-import React from 'react';
-class App extends React.Component{
-    state = {
-        isLoading: true,
-        movies: []
-    };
-    componentDidMount() {
-        setTimeout(()=> {
-            this.setState({isLoading: false});
-        }, 6000);
-    }
-    render() {
-        const {isLoading} = this.state;
-        return <div>{isLoading ? "Loading...": "we are ready"}</div>
-    }
+import React,{useState,useEffect} from 'react';
+const App = () =>{
+    const [Loading,isLoading] = useState(true);
+    useEffect(()=>{
+        setTimeout(()=>{
+            isLoading(!Loading)
+        }, 6000)
+    })
+    return(
+        <div>{Loading ? "Loading...": "we are ready"}</div>
+    );
 }
 
 export default App;
