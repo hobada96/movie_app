@@ -12,7 +12,7 @@ const App = () => {
             try {
                 setError(false)
                 setMovies(null);
-                const {data: {data: {movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json");
+                    const {data: {data: {movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json");
                 setMovies(movies);
             } catch (e) {
                 setError(e)
@@ -20,20 +20,24 @@ const App = () => {
             isLoading(false);
         };
         fetchMovies();
-    },[]) // 여기서 에러 발생.
+    }, []) // 여기서 에러 발생.
 
-    if(error) return <div>에러발생</div>
+    if (error) return <div>에러발생</div>
     return (
-            <div>{Loading
-                ? "Loading..."
-                : movies.map(movie => {
-                return <Movie
-                         id={movie.id}
-                         year={movie.year}
-                         title={movie.title}
-                         summary={movie.summary}
-                         poster={movie.poster} />
-            })}</div>
+        <div class={"loader"}>{
+            Loading
+            ? <span class={"loader__text"}>Loading...</span>
+            : <div>{
+                movies.map(movie => (
+                     <Movie
+                        id={movie.id}
+                        year={movie.year}
+                        title={movie.title}
+                        summary={movie.summary}
+                        poster={movie.medium_cover_image} />
+                ))
+            }</div>
+        }</div>
     );
 }
 
