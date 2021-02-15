@@ -1,0 +1,1 @@
+import React from "react"const About = () =>{    return <span>About this page i built</span>}export default About
