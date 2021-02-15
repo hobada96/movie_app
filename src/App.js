@@ -1,45 +1,20 @@
-import React, {useState, useEffect} from 'react';
-import axios from "axios";
-import Movie from "./Movie";
+import React from "react";
+import {HashRouter, Route} from "react-router-dom";
+import Navigation from "./components/Navigation";
+import About from "./routes/About";
+import Home from "./routes/Home"
+import Detail from "./routes/Detail"
+import './css/App.css'
 
-const App = () => {
-    const [movies, setMovies] = useState(null);
-    const [Loading, isLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchMovies = async () => {
-            try {
-                setError(false)
-                setMovies(null);
-                    const {data: {data: {movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json");
-                setMovies(movies);
-            } catch (e) {
-                setError(e)
-            }
-            isLoading(false);
-        };
-        fetchMovies();
-    }, []) // 여기서 에러 발생.
-
-    if (error) return <div>에러발생</div>
-    return (
-        <div class={"loader"}>{
-            Loading
-            ? <span class={"loader__text"}>Loading...</span>
-            : <div>{
-                movies.map(movie => (
-                     <Movie
-                        id={movie.id}
-                        year={movie.year}
-                        title={movie.title}
-                        summary={movie.summary}
-                        poster={movie.medium_cover_image} />
-                ))
-            }</div>
-        }</div>
-    );
+const app = () => {
+    return  (
+    <HashRouter>
+        <Navigation/>
+        <Route path={"/"} exact={true} component={Home}/>
+        <Route path={"/about" } component={About}/>
+        <Route path={"/movie-detail"} component={Detail}/>
+    </HashRouter>
+    )
 }
 
-export default App;
-
+export default app
