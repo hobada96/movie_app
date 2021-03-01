@@ -1,8 +1,23 @@
  container component는 높이를 정한다.
+
 드릴링 root compoent에서 순차적으로 내려주는것.
 불필요한 API를 두번 호출하지 않기 위해서. redux를 쓴다.
 data를 가져오는 hook을 만든다.
 ex) navigation이 focus할때
 최대한 호출하지 않는다. => redux store에 있을때 쓴다.
 매번 호출한다 => usefetch(임의 hook)를 쓰지않고 호출
-navigation이 동작할때마다 => navigation의 이벤트에 따라서.	
+navigation이 동작할때마다 => navigation의 이벤트에 따라서.
+
+
+=========================================================
+css
+layout setting
+접근성 react
+media query
+z index
+
+====================
+책
+css secret
+새로운 css 레이아웃
+==================
