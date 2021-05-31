@@ -4,9 +4,9 @@
     <list default="true" id="93b299fe-a9d9-4ed4-925e-145cd3a5106c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Movie.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hook/useAsync.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hook/useAsync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/movies.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Velopert_react/example/Chap20" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -52,6 +52,10 @@
       <workItem from="1614870397132" duration="3677000" />
       <workItem from="1614953063294" duration="2964000" />
       <workItem from="1614958028039" duration="9000" />
+      <workItem from="1616735797873" duration="94000" />
+      <workItem from="1617344992425" duration="995000" />
+      <workItem from="1617596987499" duration="814000" />
+      <workItem from="1618465705739" duration="95000" />
     </task>
     <task id="LOCAL-00001" summary="first init with react-create-app">
       <created>1611071257326</created>
